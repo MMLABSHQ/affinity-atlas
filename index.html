@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affinity Atlas — Cultural Programming Agent</title>
+  <meta name="description" content="Evidence-led cultural programming concepts powered by live Qloo affinities.">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Affinity Atlas home"><span class="brand-mark">✳</span> AFFINITY <b>ATLAS</b></a>
+      <div class="tag">AGENT REVIEW <span class="tag-dot"></span> LIVE QLOO</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="line"></span> CULTURAL INTELLIGENCE / 001</div>
+        <h1>Discover unexpected<br><em>cultural connections.</em></h1>
+        <p class="subtitle">Turn real affinity signals into thoughtful programming concepts across music, film, brands, and places. <strong>Evidence first. Imagination second.</strong></p>
+      </section>
+
+      <div class="layout">
+        <section class="panel input-panel" aria-labelledby="form-title">
+          <div class="section-head"><span class="index">01</span><h2 id="form-title">Brief your research agent</h2></div>
+          <form id="research-form">
+            <label for="artist">Cultural anchor <small>ARTIST</small></label>
+            <input id="artist" name="artist" value="Nils Frahm" minlength="2" maxlength="80" required placeholder="e.g. Nils Frahm">
+            <label for="city">City <small>LOCATION</small></label>
+            <input id="city" name="city" value="Madrid" minlength="2" maxlength="80" required placeholder="e.g. Madrid">
+            <label for="objective">Programming objective <small>INTENT</small></label>
+            <textarea id="objective" name="objective" rows="3" minlength="3" maxlength="180" required>Develop a cross-disciplinary cultural experience with an unexpected yet defensible connection.</textarea>
+            <div class="goal-presets" aria-label="Programming objective examples">
+              <button type="button" data-goal="film" class="goal-preset">Film programme</button>
+              <button type="button" data-goal="audio" class="goal-preset">Sound installation</button>
+              <button type="button" data-goal="education" class="goal-preset">Educational workshop</button>
+            </div>
+            <p class="help">Try two objectives with the same artist and city. If an LLM reviewer is configured on the server, it selects formats; otherwise verified editorial rules remain active.</p>
+            <div id="key-field">
+              <label for="api-key">Qloo API key <small>LOCAL DEMO ONLY</small></label>
+              <input id="api-key" name="api-key" type="password" autocomplete="off" placeholder="Paste your key here" spellcheck="false">
+              <p class="help">The key is sent only to this local server for the current request. Not saved to disk or browser storage. Never publish it in source code.</p>
+            </div>
+            <button id="submit" type="submit"><span id="submit-label">Explore connections</span><span aria-hidden="true">↗</span></button>
+            <p class="status" id="status" role="status" aria-live="polite">Ready to research live Qloo affinities.</p>
+          </form>
+          <div class="rail"><div><span>RESEARCH</span><b>01</b></div><div><span>DECIDE</span><b>02</b></div><div><span>CRITIQUE / REVISE</span><b>03</b></div></div>
+        </section>
+
+        <section class="panel output-panel" aria-labelledby="results-title">
+          <div class="section-head"><span class="index">02</span><h2 id="results-title">Curatorial opportunities</h2></div>
+          <div id="empty-state" class="empty-state"><div class="orb"><div class="orb-inner">✳</div></div><h3>Possibilities, not predictions.</h3><p>Start with a cultural anchor. The agent will inspect real cross-domain matches and draft up to three concepts grounded in what it found.</p><div class="legend"><span>◉  MUSIC</span><span>◉  FILM</span><span>◉  BRANDS</span><span>◉  PLACES</span></div></div>
+          <div id="result-state" hidden>
+            <div class="summary" id="summary"></div>
+            <div id="warnings"></div>
+            <div class="cards" id="cards"></div>
+            <h3 class="subheading">Agent review</h3><div id="agent-review"></div>
+            <h3 class="subheading">Decision audit</h3><div id="decision"></div>
+            <h3 class="subheading">Evidence ledger</h3><div id="evidence"></div>
+            <h3 class="subheading">Research trace</h3><div id="trace"></div>
+          </div>
+        </section>
+      </div>
+      <section class="disclaimer"><span class="asterisk">✳</span><div><b>Curatorial suggestions ≠ confirmed partnerships.</b><p>Qloo supplies discoverable entities and related signals. Event concepts are prototype interpretations. Venue access, licensing, talent, and sponsorship must be verified independently. Input-signal score 1 is not 100% compatibility.</p></div></section>
+    </main>
+    <footer><span>AFFINITY ATLAS / DEMO 0.4 · BOUNDED AGENT REVIEW</span><span>Built with live Qloo data · Transparent by design</span></footer>
+  </div>
+</body>
+</html>
